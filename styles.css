@@ -16,20 +16,8 @@ body {
   transition: transform 0.3s ease;
 }
 
-.nav-bar.vertical {
-  display: none;
-}
-
 .nav-bar.vertical.show {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 200px;
-  flex-direction: column;
   transform: translateX(0);
-  z-index: 1000;
 }
 
 .menu-toggle {
@@ -82,21 +70,31 @@ main {
 
 /* Responsive Layout */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  .nav-bar {
+    display: none;
   }
 
   .nav-bar.vertical {
     display: flex;
   }
 
-  .nav-bar:not(.vertical) {
-    display: none;
+  .menu-toggle {
+    display: block;
   }
 
   .contact-me {
     flex-direction: column;
     align-items: center;
+  }
+  .nav-bar.vertical {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    flex-direction: column;
+    transform: translateX(-100%);
+    z-index: 1000;
   }
 }
 
