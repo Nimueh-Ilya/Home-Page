@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 1;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-around;
+  .project-container {
+    height: auto;
+  }
+}
